@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>כנס לקוחות נובידאה 2026 | מ-Data Driven ל-Insights Driven</title>
+    <meta name="description" content="הצטרפו אלינו לכנס הלקוחות השנתי של נובידאה. גלו את פתרונות ה-AI החדשים, מפת הדרכים הטכנולוגית, והכלים לקידום הפעילות העסקית שלכם.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #0d1021;
+            --bg-card: #161b33;
+            --bg-input: #1f2544;
+            --gold: #f5c453;
+            --gold-hover: #fcd579;
+            --gold-gradient: linear-gradient(135deg, #f5c453 0%, #c99325 100%);
+            --purple-gradient: linear-gradient(180deg, #12162e 0%, #0d1021 100%);
+            --white: #ffffff;
+            --text-muted: #b5bad0;
+            --text-dark: #6e7592;
+            --success-color: #2ec4b6;
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Rubik', 'Assistant', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--white);
+            line-height: 1.6;
+            text-align: right;
+            direction: rtl;
+            overflow-x: hidden;
+        }
+
+        /* Container styling */
+        .novidea-landing-wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* Header & Hero Section */
+        .hero-section {
+            text-align: center;
+            padding: 60px 20px 40px 20px;
+            background: radial-gradient(circle at top, rgba(245, 196, 83, 0.1) 0%, transparent 60%);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-logo {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            display: inline-block;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .hero-title {
+            font-size: clamp(32px, 5vw, 48px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            color: var(--white);
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(16px, 2.5vw, 20px);
+            color: var(--gold);
+            font-weight: 500;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Event Quick Details Card */
+        .event-details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .detail-card {
+            background-color: var(--bg-card);
+            border: 1px solid rgba(245, 196, 83, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: var(--transition-smooth);
+            position: relative;
+        }
+
+        .detail-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(245, 196, 83, 0.3);
+            box-shadow: 0 8px 25px rgba(245, 196, 83, 0.05);
+        }
+
+        .detail-card i {
+            font-size: 28px;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .detail-card h4 {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .detail-card p {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        /* Countdown Section */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            direction: ltr; /* Keeps the numbers correctly aligned left-to-right */
+        }
+
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 10px 15px;
+            border-radius: 8px;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .countdown-val {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--gold);
+            display: block;
+        }
+
+        .countdown-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            padding: 20px 0 40px 0;
+            text-align: right;
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .intro-section p {
+            margin-bottom: 20px;
+            color: #d1d5db;
+        }
+
+        .intro-section p strong {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* Divider */
+        .gold-divider {
+            height: 1px;
+            background: var(--gold-gradient);
+            margin: 40px 0;
+            width: 100%;
+            border: none;
+            opacity: 0.8;
+        }
+
+        /* Schedule Table Section */
+        h2.section-title {
+            text-align: right;
+            color: var(--gold);
+            font-size: 28px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2.section-title::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background: rgba(245, 196, 83, 0.2);
+            margin-right: 15px;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 40px;
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+            text-align: right;
+            direction: rtl;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .schedule-table tr {
+            border-bottom: 1px solid rgba(245, 196, 83, 0.15);
+            transition: var(--transition-smooth);
+        }
+
+        .schedule-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .schedule-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .schedule-table td {
+            padding: 24px;
+            vertical-align: top;
+            text-align: right;
+        }
+
+        .time-col {
+            width: 15%;
+            font-weight: 700;
+            color: var(--gold);
+            font-size: 20px;
+            white-space: nowrap;
+            border-left: 1px solid rgba(245, 196, 83, 0.1);
+        }
+
+        .content-col {
+            width: 85%;
+        }
+
+        .content-col h3 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .content-col p {
+            margin: 0 0 10px 0;
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        .inner-list {
+            margin: 15px 0 0 0;
+            padding-right: 20px;
+            list-style-type: none;
+            text-align: right;
+        }
+
+        .inner-list li {
+            position: relative;
+            margin-bottom: 14px;
+            font-size: 16px;
+            color: var(--text-muted);
+        }
+
+        .inner-list li::before {
+            content: "•";
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            right: -15px;
+            top: -2px;
+        }
+
+        .inner-list li strong {
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .sub-text {
+            display: block;
+            font-size: 14px;
+            color: #949ab1;
+            margin-top: 6px;
+            font-style: italic;
+        }
+
+        /* Guest Speaker Section */
+        .speaker-card {
+            background-color: rgba(255, 255, 255, 0.02);
+            border-right: 4px solid var(--gold);
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: right;
+            box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.02);
+            border-left: 1px solid rgba(255, 255, 255, 0.02);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        .speaker-header-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .speaker-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--gold-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--bg-color);
+            font-size: 28px;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(245, 196, 83, 0.3);
+        }
+
+        .speaker-title-info h4 {
+            font-size: 20px;
+            color: var(--white);
+            margin-bottom: 2px;
+        }
+
+        .speaker-title-info span {
+            color: var(--gold);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .speaker-card p {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .speaker-bio {
+            font-size: 14px;
+            color: #949ab1;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 20px;
+            margin-top: 20px;
+            line-height: 1.7;
+        }
+
+        /* Form Styling */
+        .form-section {
+            background-color: var(--bg-card);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid rgba(245, 196, 83, 0.15);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .form-title-container {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .form-title {
+            color: var(--gold);
+            font-size: 32px;
+            margin: 0;
+            font-weight: 700;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .form-subtitle {
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-top: 8px;
+        }
+
+        .registration-form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .form-group-full {
+            grid-column: span 2;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            position: relative;
+        }
+
+        .form-group label {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-group label i {
+            color: var(--gold);
+            font-size: 14px;
+        }
+
+        .form-group input, .form-group select {
+            background-color: var(--bg-input);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 14px 16px;
+            color: var(--white);
+            font-family: inherit;
+            font-size: 16px;
+            transition: var(--transition-smooth);
+            width: 100%;
+            outline: none;
+            text-align: right;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 10px rgba(245, 196, 83, 0.15);
+            background-color: rgba(31, 37, 68, 0.8);
+        }
+
+        .form-group input::placeholder {
+            color: var(--text-dark);
+        }
+
+        /* Error States */
+        .form-group.has-error input {
+            border-color: #ef4444;
+        }
+        .error-message {
+            color: #ef4444;
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+        }
+        .form-group.has-error .error-message {
+            display: block;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            grid-column: span 2;
+            background: var(--gold-gradient);
+            color: #0d1021;
+            border: none;
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            box-shadow: 0 4px 20px rgba(245, 196, 83, 0.2);
+            margin-top: 15px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(245, 196, 83, 0.4);
+            filter: brightness(1.1);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .submit-btn i {
+            transition: var(--transition-smooth);
+        }
+
+        .submit-btn:hover i {
+            transform: translateX(-4px);
+        }
+
+        /* Loader inside button */
+        .btn-spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(13, 16, 33, 0.3);
+            border-radius: 50%;
+            border-top-color: #0d1021;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Success State View */
+        .success-container {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: rgba(46, 196, 182, 0.1);
+            border: 2px solid var(--success-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: var(--success-color);
+            margin: 0 auto 24px auto;
+            box-shadow: 0 0 20px rgba(46, 196, 182, 0.2);
+        }
+
+        .success-title {
+            color: var(--white);
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .success-desc {
+            color: var(--text-muted);
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto 24px auto;
+        }
+
+        /* Footer */
+        .page-footer {
+            text-align: center;
+            padding: 60px 20px 20px 20px;
+            color: var(--text-dark);
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 60px;
+        }
+
+        .footer-logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .novidea-landing-wrapper {
+                padding: 20px 16px;
+            }
+
+            .event-details-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .schedule-table tr {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .time-col {
+                width: 100%;
+                border-left: none;
+                padding: 16px 20px 8px 20px;
+                border-bottom: 1px solid rgba(245, 196, 83, 0.08);
+            }
+
+            .content-col {
+                width: 100%;
+                padding: 16px 20px 24px 20px;
+            }
+
+            .registration-form {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .form-group-full, .submit-btn {
+                grid-column: span 1;
+            }
+
+            .form-section {
+                padding: 24px 20px;
+            }
+
+            .speaker-card {
+                padding: 20px;
+            }
+
+            .speaker-header-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="novidea-landing-wrapper">
+    <!-- Hero / Header Section -->
+    <header class="hero-section">
+        <div class="hero-logo">Novidea</div>
+        <h1 class="hero-title">כנס לקוחות נובידאה 2026</h1>
+        <p class="hero-subtitle">העולם העסקי זז במהירות מניהול מידע (Data Driven) לקבלת החלטות ותובנות עסקיות בזמן אמת (Insights Driven).</p>
+        
+        <!-- Interactive Countdown Timer -->
+        <div class="countdown-container" id="countdown">
+            <div class="countdown-item">
+                <span class="countdown-val" id="days">00</span>
+                <span class="countdown-label">ימים</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-val" id="hours">00</span>
+                <span class="countdown-label">שעות</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-val" id="minutes">00</span>
+                <span class="countdown-label">דקות</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-val" id="seconds">00</span>
+                <span class="countdown-label">שניות</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Key Info Cards -->
+    <div class="event-details-grid">
+        <div class="detail-card">
+            <i class="fa-regular fa-calendar-days"></i>
+            <h4>תאריך הכנס</h4>
+            <p>12 בנובמבר 2026</p>
+        </div>
+        <div class="detail-card">
+            <i class="fa-regular fa-clock"></i>
+            <h4>שעות פעילות</h4>
+            <p>09:00 - 14:30</p>
+        </div>
+        <div class="detail-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <h4>מיקום האירוע</h4>
+            <p>מרכז הכנסים, תל אביב</p>
+        </div>
+    </div>
+
+    <!-- Intro Text -->
+    <section class="intro-section">
+        <p>אנחנו נרגשים להזמין אתכם לכנס הלקוחות של <strong>נובידאה</strong>, להציג לכם מה חדש, מה עתיד לבוא ולתת לכם כלים לקדם את הפעילות שלכם איתנו.</p>
+        <p>בנינו יום מרוכז, קצבי ופרקטי במיוחד, שכולו פתרונות לכאבים היומיומיים שלכם והצצה אל העתיד הטכנולוגי של השוק.</p>
+    </section>
+
+    <hr class="gold-divider">
+
+    <!-- Schedule Section -->
+    <section id="schedule">
+        <h2 class="section-title">
+            <i class="fa-regular fa-calendar-check" style="margin-left: 10px;"></i> לו"ז הכנס
+        </h2>
+        
+        <table class="schedule-table">
+            <tr>
+                <td class="time-col">09:00</td>
+                <td class="content-col">
+                    <h3>נחיתה רכה וקפה של בוקר</h3>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="time-col">09:30</td>
+                <td class="content-col">
+                    <h3>הרצאות TED: כלים ומודולים חדשים שישנו לכם את יום העבודה</h3>
+                    <p>בפורמט TED קצבי וממוקד, נחשוף את הפיצ'רים החדשים שיקחו את הביצועים שלכם לקצה:</p>
+                    <ul class="inner-list">
+                        <li>
+                            <strong>מבט של 360°:</strong> איך הכלים החדשים משקפים לכם את תמונת הלקוח המלאה ברגע. 
+                            <span class="sub-text">* תצוגת מידע וממשק משתמש (UI) חדש לחלוטין!</span>
+                        </li>
+                        <li>
+                            <strong>ציטוטי מחיר:</strong> כך תהפכו את "קוואלה" למנוע אוטומטי, מהיר ומדויק להפקת ציטוטי מחיר.
+                        </li>
+                        <li>
+                            <strong>טעינת קבצי קולקטיב:</strong> טעינה קלה של קבצי קולקטיב למערכת ויצירת פוליסות עבור המבוטחים.
+                            <span class="sub-text">* מעקב בזמן אמת אחר סטטוס טעינת קבצים ורשומות, עם התראות אוטומטיות וכלי טיפול מהירים בתקלות.</span>
+                        </li>
+                        <li>
+                            <strong>נתוני תשואות:</strong> חשיפה למאגרי מידע חיצוניים.
+                        </li>
+                        <li>
+                            <strong>סדר שעושה שקט:</strong> תיוק העתקי פוליסות.
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="time-col">10:15</td>
+                <td class="content-col">
+                    <h3>ה- AI מעבר למספרים ולנתונים, החזון של נובידאה: מ- Data Driven ל - Insights Driven</h3>
+                    <p>הגיע הזמן לתת למערכת לעבוד בשבילכם. הצצה מרתקת לעתיד שבו ה- AI של נובידאה הופך את המידע במערכת לתובנות עסקיות מיידיות, מנועי צמיחה והחלטות בזמן אמת.</p>
+                    <p><strong>במהלך המפגש יתקיים דמו חי של המערכת עם פיצ'ר ה-AI הראשון!</strong></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="time-col">10:45</td>
+                <td class="content-col">
+                    <h3>הפסקת קפה ונטוורקינג</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="time-col">11:00</td>
+                <td class="content-col">
+                    <h3>הצצה לעתיד: מפת הדרכים של נובידאה</h3>
+                    <ul class="inner-list">
+                        <li><strong>לאן אנחנו צועדים?</strong> החידושים, הפיתוחים והיעדים הבאים שיובילו את השוק.</li>
+                    </ul>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="time-col">11:45</td>
+                <td class="content-col">
+                    <h3>הפסקת צהריים חגיגית</h3>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="time-col">12:45</td>
+                <td class="content-col">
+                    <h3>הרצאת אורח – טל דן<br><span style="color: var(--gold); font-size: 16px; font-weight: 500;">הגורם האנושי: איך תגרמו לצוות שלכם להתאהב בטכנולוגיה?</span></h3>
+                    
+                    <div class="speaker-card">
+                        <div class="speaker-header-meta">
+                            <div class="speaker-avatar">תד</div>
+                            <div class="speaker-title-info">
+                                <h4>טל דן</h4>
+                                <span>מומחית בליווי מנהלים ומובילת שינוי ארגוני</span>
+                            </div>
+                        </div>
+                        
+                        <p>הטמעת טכנולוגיה בארגון היא לא רק אירוע טכנולוגי – היא קודם כל אירוע אנושי. בהרצאה מרתקת, טל דן תחשוף את המפתח לגישור על הפער שבין הכלים הטכנולוגיים לבין העבודה היומיומית בסוכנויות, ותציג איך הופכים את האתגרים בשטח להצלחה אמיתית.</p>
+                        <p>איך מנהלים את "סוכני השינוי" הסמויים במשרד? כיצד רותמים את העובדים לחזון הדיגיטלי, ואיך מייצרים תרבות ארגונית שדוחפת קדימה? הצצה פרקטית למנוע האמיתי של העסק שלכם – האנשים שלכם.</p>
+                        <p>הרצאה בגובה העיניים, המשלבת דוגמאות אמיתיות מעולמות הביטוח והניהול עם כלים פרקטיים ליום שאחרי.</p>
+                        
+                        <div class="speaker-bio">
+                            <strong>* טל דן</strong> היא מומחית בליווי מנהלים, מובילת תהליכי שינוי ארגוני ויועצת אסטרטגית לחברות וסוכנויות בעולם הביטוח והניהול. לאורך השנים היא מלווה ארגונים ברגעי המפתח המורכבים ביותר שלהם: החל מהטמעת מערכות טכנולוגיות מתקדמות ועד לפיצוח האתגרים האנושיים והתרבותיים שנוצרים בשטח.
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="time-col">14:00</td>
+                <td class="content-col">
+                    <h3>הצידה לדרך שלכם: סיכום וכלים פרקטיים</h3>
+                    <ul class="inner-list">
+                        <li><strong>איך מתקדמים מכאן?</strong> דרכי התקשרות, מרכז הידע החדש, הניוזלטר ושדרוגי הגרסה הבאים.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="form-section" id="register">
+        <div class="form-title-container">
+            <h2 class="form-title">הרשמה לכנס (ללא עלות)</h2>
+            <p class="form-subtitle">הבטיחו את מקומכם כבר עכשיו. מספר המקומות מוגבל.</p>
+        </div>
+
+        <form id="regForm" class="registration-form" onsubmit="submitForm(event)" novalidate>
+            <div class="form-group">
+                <label for="fullName"><i class="fa-regular fa-user"></i> שם מלא *</label>
+                <input type="text" id="fullName" placeholder="ישראל ישראלי" required>
+                <div class="error-message">נא להזין שם מלא</div>
+            </div>
+
+            <div class="form-group">
+                <label for="companyName"><i class="fa-regular fa-building"></i> שם החברה/הסוכנות *</label>
+                <input type="text" id="companyName" placeholder="שם החברה שלך" required>
+                <div class="error-message">נא להזין את שם החברה או הסוכנות</div>
+            </div>
+
+            <div class="form-group">
+                <label for="workEmail"><i class="fa-regular fa-envelope"></i> אימייל עסקי *</label>
+                <input type="email" id="workEmail" placeholder="name@company.com" required>
+                <div class="error-message">נא להזין אימייל עסקי תקין</div>
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber"><i class="fa-solid fa-mobile-screen-button"></i> טלפון נייד *</label>
+                <input type="tel" id="phoneNumber" placeholder="050-1234567" required>
+                <div class="error-message">נא להזין מספר טלפון תקין (ספרות בלבד)</div>
+            </div>
+
+            <div class="form-group form-group-full">
+                <label for="jobTitle"><i class="fa-solid fa-briefcase"></i> תפקיד בארגון *</label>
+                <select id="jobTitle" required>
+                    <option value="" disabled selected>בחרו תפקיד מהרשימה</option>
+                    <option value="owner">בעלים / מנכ"ל</option>
+                    <option value="agent">סוכן ביטוח</option>
+                    <option value="operation">מנהל/ת תפעול</option>
+                    <option value="technology">מנהל/ת טכנולוגיות / מערכות מידע</option>
+                    <option value="other">אחר</option>
+                </select>
+                <div class="error-message">נא לבחור תפקיד מהרשימה</div>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <span>הרשמה לכנס</span>
+                <i class="fa-solid fa-arrow-left"></i>
+                <div class="btn-spinner" id="btnSpinner"></div>
+            </button>
+        </form>
+
+        <!-- Success Animation View -->
+        <div class="success-container" id="successView">
+            <div class="success-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="success-title">הרשמתך התקבלה בהצלחה!</h3>
+            <p class="success-desc">שמחנו לקבל את הרשמתך לכנס הלקוחות של נובידאה 2026. אישור הרשמה מפורט נשלח אלייך במייל ברגעים אלו.</p>
+            <div style="color: var(--gold); font-weight: 600; font-size: 18px;">נתראה ב-12 בנובמבר!</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div class="footer-logo">Novidea</div>
+        <p>© 2026 נובידאה. כל הזכויות שמורות.</p>
+    </footer>
+</div>
+
+<script>
+    // Countdown Timer logic
+    const targetDate = new Date("November 12, 2026 09:00:00").getTime();
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const difference = targetDate - now;
+
+        if (difference < 0) {
+            document.getElementById("countdown").style.display = "none";
+            return;
+        }
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = String(days).padStart(2, '0');
+        document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+        document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+        document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+    }
+
+    // Run countdown update every second
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Form validation and submission
+    function submitForm(event) {
+        event.preventDefault();
+        
+        const form = document.getElementById("regForm");
+        const fullName = document.getElementById("fullName");
+        const companyName = document.getElementById("companyName");
+        const workEmail = document.getElementById("workEmail");
+        const phoneNumber = document.getElementById("phoneNumber");
+        const jobTitle = document.getElementById("jobTitle");
+        
+        let isValid = true;
+
+        // Simple validation check
+        const inputs = [fullName, companyName, workEmail, phoneNumber, jobTitle];
+        inputs.forEach(input => {
+            const group = input.parentElement;
+            if (!input.value || (input.type === "email" && !validateEmail(input.value))) {
+                group.classList.add("has-error");
+                isValid = false;
+            } else {
+                group.classList.remove("has-error");
+            }
+        });
+
+        if (!isValid) return;
+
+        // Show spinner state on button
+        const submitBtn = document.getElementById("submitBtn");
+        const btnText = submitBtn.querySelector("span");
+        const btnIcon = submitBtn.querySelector("i");
+        const spinner = document.getElementById("btnSpinner");
+
+        btnText.style.display = "none";
+        btnIcon.style.display = "none";
+        spinner.style.display = "block";
+        submitBtn.disabled = true;
+
+        // Simulate API call
+        setTimeout(() => {
+            // Hide Form, show success message
+            form.style.display = "none";
+            document.getElementById("successView").style.display = "block";
+            
+            // Scroll smoothly to success view
+            document.getElementById("register").scrollIntoView({ behavior: 'smooth' });
+        }, 1500);
+    }
+
+    // Helper functions
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    // Add live check on input changes to clear error outline
+    const formFields = document.querySelectorAll("#regForm input, #regForm select");
+    formFields.forEach(field => {
+        field.addEventListener("input", function() {
+            if (this.value) {
+                this.parentElement.classList.remove("has-error");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
