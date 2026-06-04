@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>כנס לקוחות נובידאה 2026 | מ-Data Driven ל-Insights Driven</title>
-    <meta name="description" content="הצטרפו אלינו לכנס הלקוחות השנתי של נובידאה. גלו את פתרונות ה-AI החדשים, מפת הדרכים הטכנולוגית, והכלים לקידום הפעילות העסקית שלכם.">
-    
+    <meta name="description"
+        content="הצטרפו אלינו לכנס הלקוחות השנתי של נובידאה. גלו את פתרונות ה-AI החדשים, מפת הדרכים הטכנולוגית, והכלים לקידום הפעילות העסקית שלכם.">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Rubik:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
     <!-- FontAwesome for Premium Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -72,6 +76,12 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
             overflow: hidden;
+        }
+
+        .hs-form-container {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
         }
 
         .hero-logo {
@@ -154,7 +164,8 @@
             justify-content: center;
             gap: 15px;
             margin-top: 20px;
-            direction: ltr; /* Keeps the numbers correctly aligned left-to-right */
+            direction: ltr;
+            /* Keeps the numbers correctly aligned left-to-right */
         }
 
         .countdown-item {
@@ -182,8 +193,8 @@
         /* Intro Section */
         .intro-section {
             padding: 20px 0 40px 0;
-            text-align: right;
-            font-size: 18px;
+            text-align: center;
+            font-size: 26px;
             max-width: 800px;
             margin: 0 auto;
         }
@@ -235,7 +246,7 @@
             background-color: var(--bg-card);
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
             text-align: right;
             direction: rtl;
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -379,7 +390,7 @@
         .speaker-bio {
             font-size: 14px;
             color: #949ab1;
-            border-top: 1px solid rgba(255,255,255,0.08);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
             padding-top: 20px;
             margin-top: 20px;
             line-height: 1.7;
@@ -449,7 +460,8 @@
             font-size: 14px;
         }
 
-        .form-group input, .form-group select {
+        .form-group input,
+        .form-group select {
             background-color: var(--bg-input);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 8px;
@@ -463,7 +475,8 @@
             text-align: right;
         }
 
-        .form-group input:focus, .form-group select:focus {
+        .form-group input:focus,
+        .form-group select:focus {
             border-color: var(--gold);
             box-shadow: 0 0 10px rgba(245, 196, 83, 0.15);
             background-color: rgba(31, 37, 68, 0.8);
@@ -477,12 +490,14 @@
         .form-group.has-error input {
             border-color: #ef4444;
         }
+
         .error-message {
             color: #ef4444;
             font-size: 12px;
             margin-top: 4px;
             display: none;
         }
+
         .form-group.has-error .error-message {
             display: block;
         }
@@ -537,7 +552,9 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         /* Success State View */
@@ -549,8 +566,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .success-icon {
@@ -631,7 +655,8 @@
                 gap: 20px;
             }
 
-            .form-group-full, .submit-btn {
+            .form-group-full,
+            .submit-btn {
                 grid-column: span 1;
             }
 
@@ -651,227 +676,246 @@
         }
     </style>
 </head>
+
 <body>
 
-<div class="novidea-landing-wrapper">
-    <!-- Hero / Header Section -->
-    <header class="hero-section" style="background: none; border: none; padding: 0; margin-bottom: 30px;">
-        <img src="banner.webp" alt="הזמנה לכנס לקוחות נובידאה - 1 ביולי" class="banner-img">
-        
-        <!-- Interactive Countdown Timer -->
-        <div class="countdown-container" id="countdown" style="margin-top: 25px;">
-            <div class="countdown-item">
-                <span class="countdown-val" id="days">00</span>
-                <span class="countdown-label">ימים</span>
+    <div class="novidea-landing-wrapper">
+        <!-- Hero / Header Section -->
+        <header class="hero-section" style="background: none; border: none; padding: 0; margin-bottom: 30px;">
+            <img src="banner.webp" alt="הזמנה לכנס לקוחות נובידאה - 1 ביולי" class="banner-img">
+
+            <!-- Interactive Countdown Timer -->
+            <div class="countdown-container" id="countdown" style="margin-top: 25px;">
+                <div class="countdown-item">
+                    <span class="countdown-val" id="days">00</span>
+                    <span class="countdown-label">ימים</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-val" id="hours">00</span>
+                    <span class="countdown-label">שעות</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-val" id="minutes">00</span>
+                    <span class="countdown-label">דקות</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-val" id="seconds">00</span>
+                    <span class="countdown-label">שניות</span>
+                </div>
             </div>
-            <div class="countdown-item">
-                <span class="countdown-val" id="hours">00</span>
-                <span class="countdown-label">שעות</span>
+        </header>
+
+        <!-- Key Info Cards -->
+        <div class="event-details-grid">
+            <div class="detail-card">
+                <i class="fa-regular fa-calendar-days"></i>
+                <h4>תאריך הכנס</h4>
+                <p>יום רביעי, 1 ביולי 2026</p>
             </div>
-            <div class="countdown-item">
-                <span class="countdown-val" id="minutes">00</span>
-                <span class="countdown-label">דקות</span>
+            <div class="detail-card">
+                <i class="fa-regular fa-clock"></i>
+                <h4>שעות פעילות</h4>
+                <p>09:00 - 14:30</p>
             </div>
-            <div class="countdown-item">
-                <span class="countdown-val" id="seconds">00</span>
-                <span class="countdown-label">שניות</span>
+            <div class="detail-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <h4>מיקום האירוע</h4>
+                <p>משרדי נובידאה, הפנינה 8, רעננה</p>
             </div>
         </div>
-    </header>
 
-    <!-- Key Info Cards -->
-    <div class="event-details-grid">
-        <div class="detail-card">
-            <i class="fa-regular fa-calendar-days"></i>
-            <h4>תאריך הכנס</h4>
-            <p>יום רביעי, 1 ביולי 2026</p>
-        </div>
-        <div class="detail-card">
-            <i class="fa-regular fa-clock"></i>
-            <h4>שעות פעילות</h4>
-            <p>09:00 - 14:30</p>
-        </div>
-        <div class="detail-card">
-            <i class="fa-solid fa-location-dot"></i>
-            <h4>מיקום האירוע</h4>
-            <p>משרדי נובידאה, הפנינה 8, רעננה</p>
-        </div>
-    </div>
+        <!-- Intro Text -->
+        <section class="intro-section">
+            <p>העולם העסקי זז במהירות מניהול מידע (<strong>Data Driven</strong>) לקבלת החלטות ותובנות עסקיות בזמן אמת (<strong>Insights Driven</strong>)</p>
+            <p>אנחנו נרגשים להזמין אתכם לכנס הלקוחות של <strong>נובידאה</strong>, להציג לכם מה חדש, מה עתיד לבוא ולתת לכם כלים לקדם את הפעילות שלכם עם נובידאה .</p>
+            <p>בנינו יום מרוכז, קצבי ופרקטי במיוחד, שכולו פתרונות לכאבים היומיומיים שלכם והצצה אל העתיד הטכנולוגי של השוק.</p>
+        </section>
 
-    <!-- Intro Text -->
-    <section class="intro-section">
-        <p>אנחנו נרגשים להזמין אתכם לכנס הלקוחות של <strong>נובידאה</strong>, להציג לכם מה חדש, מה עתיד לבוא ולתת לכם כלים לקדם את הפעילות שלכם איתנו.</p>
-        <p>בנינו יום מרוכז, קצבי ופרקטי במיוחד, שכולו פתרונות לכאבים היומיומיים שלכם והצצה אל העתיד הטכנולוגי של השוק.</p>
-    </section>
+        <hr class="gold-divider">
 
-    <hr class="gold-divider">
+        <!-- Schedule Section -->
+        <section id="schedule">
+            <h2 class="section-title">
+                <i class="fa-regular fa-calendar-check" style="margin-left: 10px;"></i> לו"ז הכנס
+            </h2>
 
-    <!-- Schedule Section -->
-    <section id="schedule">
-        <h2 class="section-title">
-            <i class="fa-regular fa-calendar-check" style="margin-left: 10px;"></i> לו"ז הכנס
-        </h2>
-        
-        <table class="schedule-table">
-            <tr>
-                <td class="time-col">09:00</td>
-                <td class="content-col">
-                    <h3>נחיתה רכה וקפה של בוקר</h3>
-                </td>
-            </tr>
-            
-            <tr>
-                <td class="time-col">09:30</td>
-                <td class="content-col">
-                    <h3>הרצאות TED: כלים ומודולים חדשים שישנו לכם את יום העבודה</h3>
-                    <p>בפורמט TED קצבי וממוקד, נחשוף את הפיצ'רים החדשים שיקחו את הביצועים שלכם לקצה:</p>
-                    <ul class="inner-list">
-                        <li>
-                            <strong>מבט של 360°:</strong> איך הכלים החדשים משקפים לכם את תמונת הלקוח המלאה ברגע. 
-                            <span class="sub-text">* תצוגת מידע וממשק משתמש (UI) חדש לחלוטין!</span>
-                        </li>
-                        <li>
-                            <strong>ציטוטי מחיר:</strong> כך תהפכו את "קוואלה" למנוע אוטומטי, מהיר ומדויק להפקת ציטוטי מחיר.
-                        </li>
-                        <li>
-                            <strong>טעינת קבצי קולקטיב:</strong> טעינה קלה של קבצי קולקטיב למערכת ויצירת פוליסות עבור המבוטחים.
-                            <span class="sub-text">* מעקב בזמן אמת אחר סטטוס טעינת קבצים ורשומות, עם התראות אוטומטיות וכלי טיפול מהירים בתקלות.</span>
-                        </li>
-                        <li>
-                            <strong>נתוני תשואות:</strong> חשיפה למאגרי מידע חיצוניים.
-                        </li>
-                        <li>
-                            <strong>סדר שעושה שקט:</strong> תיוק העתקי פוליסות.
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+            <table class="schedule-table">
+                <tr>
+                    <td class="time-col">09:00</td>
+                    <td class="content-col">
+                        <h3>נחיתה רכה וקפה של בוקר</h3>
+                    </td>
+                </tr>
 
-            <tr>
-                <td class="time-col">10:15</td>
-                <td class="content-col">
-                    <h3>ה- AI מעבר למספרים ולנתונים, החזון של נובידאה: מ- Data Driven ל - Insights Driven</h3>
-                    <p>הגיע הזמן לתת למערכת לעבוד בשבילכם. הצצה מרתקת לעתיד שבו ה- AI של נובידאה הופך את המידע במערכת לתובנות עסקיות מיידיות, מנועי צמיחה והחלטות בזמן אמת.</p>
-                    <p><strong>במהלך המפגש יתקיים דמו חי של המערכת עם פיצ'ר ה-AI הראשון!</strong></p>
-                </td>
-            </tr>
+                <tr>
+                    <td class="time-col">09:30</td>
+                    <td class="content-col">
+                        <h3>הרצאות TED: כלים ומודולים חדשים שישנו לכם את יום העבודה</h3>
+                        <p>בפורמט TED קצבי וממוקד, נחשוף את הפיצ'רים החדשים שיקחו את הביצועים שלכם לקצה:</p>
+                        <ul class="inner-list">
+                            <li>
+                                <strong>מבט של 360°:</strong> איך הכלים החדשים משקפים לכם את תמונת הלקוח המלאה ברגע.
+                                <span class="sub-text">* תצוגת מידע וממשק משתמש (UI) חדש לחלוטין!</span>
+                            </li>
+                            <li>
+                                <strong>ציטוטי מחיר:</strong> כך תהפכו את "קוואלה" למנוע אוטומטי, מהיר ומדויק להפקת
+                                ציטוטי מחיר.
+                            </li>
+                            <li>
+                                <strong>טעינת קבצי קולקטיב:</strong> טעינה קלה של קבצי קולקטיב למערכת ויצירת פוליסות
+                                עבור המבוטחים.
+                                <span class="sub-text">* מעקב בזמן אמת אחר סטטוס טעינת קבצים ורשומות, עם התראות
+                                    אוטומטיות וכלי טיפול מהירים בתקלות.</span>
+                            </li>
+                            <li>
+                                <strong>נתוני תשואות:</strong> חשיפה למאגרי מידע חיצוניים.
+                            </li>
+                            <li>
+                                <strong>סדר שעושה שקט:</strong> תיוק העתקי פוליסות.
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
-            <tr>
-                <td class="time-col">10:45</td>
-                <td class="content-col">
-                    <h3>הפסקת קפה ונטוורקינג</h3>
-                </td>
-            </tr>
+                <tr>
+                    <td class="time-col">10:15</td>
+                    <td class="content-col">
+                        <h3>ה- AI מעבר למספרים ולנתונים, החזון של נובידאה: מ- Data Driven ל - Insights Driven</h3>
+                        <p>הגיע הזמן לתת למערכת לעבוד בשבילכם. הצצה מרתקת לעתיד שבו ה- AI של נובידאה הופך את המידע
+                            במערכת לתובנות עסקיות מיידיות, מנועי צמיחה והחלטות בזמן אמת.</p>
+                        <p><strong>במהלך המפגש יתקיים דמו חי של המערכת עם פיצ'ר ה-AI הראשון!</strong></p>
+                    </td>
+                </tr>
 
-            <tr>
-                <td class="time-col">11:00</td>
-                <td class="content-col">
-                    <h3>הצצה לעתיד: מפת הדרכים של נובידאה</h3>
-                    <ul class="inner-list">
-                        <li><strong>לאן אנחנו צועדים?</strong> החידושים, הפיתוחים והיעדים הבאים שיובילו את השוק.</li>
-                    </ul>
-                </td>
-            </tr>
+                <tr>
+                    <td class="time-col">10:45</td>
+                    <td class="content-col">
+                        <h3>הפסקת קפה ונטוורקינג</h3>
+                    </td>
+                </tr>
 
-            <tr>
-                <td class="time-col">11:45</td>
-                <td class="content-col">
-                    <h3>הפסקת צהריים חגיגית</h3>
-                </td>
-            </tr>
+                <tr>
+                    <td class="time-col">11:00</td>
+                    <td class="content-col">
+                        <h3>הצצה לעתיד: מפת הדרכים של נובידאה</h3>
+                        <ul class="inner-list">
+                            <li><strong>לאן אנחנו צועדים?</strong> החידושים, הפיתוחים והיעדים הבאים שיובילו את השוק.
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
-            <tr>
-                <td class="time-col">12:45</td>
-                <td class="content-col">
-                    <h3>הרצאת אורח – טל דן<br><span style="color: var(--gold); font-size: 16px; font-weight: 500;">הגורם האנושי: איך תגרמו לצוות שלכם להתאהב בטכנולוגיה?</span></h3>
-                    
-                    <div class="speaker-card">
-                        <div class="speaker-header-meta">
-                            <div class="speaker-avatar">תד</div>
-                            <div class="speaker-title-info">
-                                <h4>טל דן</h4>
-                                <span>מומחית בליווי מנהלים ומובילת שינוי ארגוני</span>
+                <tr>
+                    <td class="time-col">11:45</td>
+                    <td class="content-col">
+                        <h3>הפסקת צהריים חגיגית</h3>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="time-col">12:45</td>
+                    <td class="content-col">
+                        <h3>הרצאת אורח – טל דן<br><span
+                                style="color: var(--gold); font-size: 16px; font-weight: 500;">הגורם האנושי: איך תגרמו
+                                לצוות שלכם להתאהב בטכנולוגיה?</span></h3>
+
+                        <div class="speaker-card">
+                            <div class="speaker-header-meta">
+                                <div class="speaker-avatar">תד</div>
+                                <div class="speaker-title-info">
+                                    <h4>טל דן</h4>
+                                    <span>מומחית בליווי מנהלים ומובילת שינוי ארגוני</span>
+                                </div>
+                            </div>
+
+                            <p>הטמעת טכנולוגיה בארגון היא לא רק אירוע טכנולוגי – היא קודם כל אירוע אנושי. בהרצאה מרתקת,
+                                טל דן תחשוף את המפתח לגישור על הפער שבין הכלים הטכנולוגיים לבין העבודה היומיומית
+                                בסוכנויות, ותציג איך הופכים את האתגרים בשטח להצלחה אמיתית.</p>
+                            <p>איך מנהלים את "סוכני השינוי" הסמויים במשרד? כיצד רותמים את העובדים לחזון הדיגיטלי, ואיך
+                                מייצרים תרבות ארגונית שדוחפת קדימה? הצצה פרקטית למנוע האמיתי של העסק שלכם – האנשים שלכם.
+                            </p>
+                            <p>הרצאה בגובה העיניים, המשלבת דוגמאות אמיתיות מעולמות הביטוח והניהול עם כלים פרקטיים ליום
+                                שאחרי.</p>
+
+                            <div class="speaker-bio">
+                                <strong>* טל דן</strong> היא מומחית בליווי מנהלים, מובילת תהליכי שינוי ארגוני ויועצת
+                                אסטרטגית לחברות וסוכנויות בעולם הביטוח והניהול. לאורך השנים היא מלווה ארגונים ברגעי
+                                המפתח המורכבים ביותר שלהם: החל מהטמעת מערכות טכנולוגיות מתקדמות ועד לפיצוח האתגרים
+                                האנושיים והתרבותיים שנוצרים בשטח.
                             </div>
                         </div>
-                        
-                        <p>הטמעת טכנולוגיה בארגון היא לא רק אירוע טכנולוגי – היא קודם כל אירוע אנושי. בהרצאה מרתקת, טל דן תחשוף את המפתח לגישור על הפער שבין הכלים הטכנולוגיים לבין העבודה היומיומית בסוכנויות, ותציג איך הופכים את האתגרים בשטח להצלחה אמיתית.</p>
-                        <p>איך מנהלים את "סוכני השינוי" הסמויים במשרד? כיצד רותמים את העובדים לחזון הדיגיטלי, ואיך מייצרים תרבות ארגונית שדוחפת קדימה? הצצה פרקטית למנוע האמיתי של העסק שלכם – האנשים שלכם.</p>
-                        <p>הרצאה בגובה העיניים, המשלבת דוגמאות אמיתיות מעולמות הביטוח והניהול עם כלים פרקטיים ליום שאחרי.</p>
-                        
-                        <div class="speaker-bio">
-                            <strong>* טל דן</strong> היא מומחית בליווי מנהלים, מובילת תהליכי שינוי ארגוני ויועצת אסטרטגית לחברות וסוכנויות בעולם הביטוח והניהול. לאורך השנים היא מלווה ארגונים ברגעי המפתח המורכבים ביותר שלהם: החל מהטמעת מערכות טכנולוגיות מתקדמות ועד לפיצוח האתגרים האנושיים והתרבותיים שנוצרים בשטח.
-                        </div>
-                    </div>
-                </td>
-            </tr>
+                    </td>
+                </tr>
 
-            <tr>
-                <td class="time-col">14:00</td>
-                <td class="content-col">
-                    <h3>הצידה לדרך שלכם: סיכום וכלים פרקטיים</h3>
-                    <ul class="inner-list">
-                        <li><strong>איך מתקדמים מכאן?</strong> דרכי התקשרות, מרכז הידע החדש, הניוזלטר ושדרוגי הגרסה הבאים.</li>
-                    </ul>
-                </td>
-            </tr>
-        </table>
-    </section>
+                <tr>
+                    <td class="time-col">14:00</td>
+                    <td class="content-col">
+                        <h3>הצידה לדרך שלכם: סיכום וכלים פרקטיים</h3>
+                        <ul class="inner-list">
+                            <li><strong>איך מתקדמים מכאן?</strong> דרכי התקשרות, מרכז הידע החדש, הניוזלטר ושדרוגי הגרסה
+                                הבאים.</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </section>
 
-    <!-- Registration Section -->
-    <section class="form-section" id="register">
-        <div class="form-title-container">
-            <h2 class="form-title">הרשמה לכנס (ללא עלות)</h2>
-            <p class="form-subtitle">הבטיחו את מקומכם כבר עכשיו. מספר המקומות מוגבל.</p>
-        </div>
+        <!-- Registration Section -->
+        <section class="form-section" id="register">
+            <div class="form-title-container">
+                <h2 class="form-title">הרשמה לכנס (ללא עלות)</h2>
+                <p class="form-subtitle">הבטיחו את מקומכם כבר עכשיו. מספר המקומות מוגבל.</p>
+            </div>
 
-        <!-- HubSpot Form Embed -->
-        <div class="hs-form-container">
-            <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
-            <script>
-              hbspt.forms.create({
-                portalId: "2799426",
-                formId: "62ce3c35-7879-487e-b803-48caefc56124",
-                region: "na1"
-              });
-            </script>
-        </div>
-    </section>
+            <!-- HubSpot Form Embed -->
+            <div class="hs-form-container">
+                <script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
+                <script>
+                    hbspt.forms.create({
+                        portalId: "2799426",
+                        formId: "62ce3c35-7879-487e-b803-48caefc56124",
+                        region: "na1"
+                    });
+                </script>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer class="page-footer">
-        <div class="footer-logo">Novidea</div>
-        <p>© 2026 נובידאה. כל הזכויות שמורות.</p>
-    </footer>
-</div>
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-logo">Novidea</div>
+            <p>© 2026 נובידאה. כל הזכויות שמורות.</p>
+        </footer>
+    </div>
 
-<script>
-    // Countdown Timer logic
-    const targetDate = new Date("July 1, 2026 09:00:00").getTime();
+    <script>
+        // Countdown Timer logic
+        const targetDate = new Date("July 1, 2026 09:00:00").getTime();
 
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const difference = targetDate - now;
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
 
-        if (difference < 0) {
-            document.getElementById("countdown").style.display = "none";
-            return;
+            if (difference < 0) {
+                document.getElementById("countdown").style.display = "none";
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = String(days).padStart(2, '0');
+            document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+            document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+            document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
         }
 
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-        document.getElementById("days").innerText = String(days).padStart(2, '0');
-        document.getElementById("hours").innerText = String(hours).padStart(2, '0');
-        document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
-        document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
-    }
-
-    // Run countdown update every second
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-</script>
+        // Run countdown update every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
 
 </body>
+
 </html>
