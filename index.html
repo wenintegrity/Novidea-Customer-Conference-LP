@@ -53,6 +53,15 @@
             padding: 40px 24px;
         }
 
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
         /* Header & Hero Section */
         .hero-section {
             text-align: center;
@@ -646,13 +655,11 @@
 
 <div class="novidea-landing-wrapper">
     <!-- Hero / Header Section -->
-    <header class="hero-section">
-        <div class="hero-logo">Novidea</div>
-        <h1 class="hero-title">כנס לקוחות נובידאה 2026</h1>
-        <p class="hero-subtitle">העולם העסקי זז במהירות מניהול מידע (Data Driven) לקבלת החלטות ותובנות עסקיות בזמן אמת (Insights Driven).</p>
+    <header class="hero-section" style="background: none; border: none; padding: 0; margin-bottom: 30px;">
+        <img src="banner.webp" alt="הזמנה לכנס לקוחות נובידאה - 1 ביולי" class="banner-img">
         
         <!-- Interactive Countdown Timer -->
-        <div class="countdown-container" id="countdown">
+        <div class="countdown-container" id="countdown" style="margin-top: 25px;">
             <div class="countdown-item">
                 <span class="countdown-val" id="days">00</span>
                 <span class="countdown-label">ימים</span>
@@ -677,7 +684,7 @@
         <div class="detail-card">
             <i class="fa-regular fa-calendar-days"></i>
             <h4>תאריך הכנס</h4>
-            <p>12 בנובמבר 2026</p>
+            <p>יום רביעי, 1 ביולי 2026</p>
         </div>
         <div class="detail-card">
             <i class="fa-regular fa-clock"></i>
@@ -687,7 +694,7 @@
         <div class="detail-card">
             <i class="fa-solid fa-location-dot"></i>
             <h4>מיקום האירוע</h4>
-            <p>מרכז הכנסים, תל אביב</p>
+            <p>משרדי נובידאה, הפנינה 8, רעננה</p>
         </div>
     </div>
 
@@ -839,7 +846,7 @@
 
 <script>
     // Countdown Timer logic
-    const targetDate = new Date("November 12, 2026 09:00:00").getTime();
+    const targetDate = new Date("July 1, 2026 09:00:00").getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
