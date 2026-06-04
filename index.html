@@ -817,59 +817,16 @@
             <p class="form-subtitle">הבטיחו את מקומכם כבר עכשיו. מספר המקומות מוגבל.</p>
         </div>
 
-        <form id="regForm" class="registration-form" onsubmit="submitForm(event)" novalidate>
-            <div class="form-group">
-                <label for="fullName"><i class="fa-regular fa-user"></i> שם מלא *</label>
-                <input type="text" id="fullName" placeholder="ישראל ישראלי" required>
-                <div class="error-message">נא להזין שם מלא</div>
-            </div>
-
-            <div class="form-group">
-                <label for="companyName"><i class="fa-regular fa-building"></i> שם החברה/הסוכנות *</label>
-                <input type="text" id="companyName" placeholder="שם החברה שלך" required>
-                <div class="error-message">נא להזין את שם החברה או הסוכנות</div>
-            </div>
-
-            <div class="form-group">
-                <label for="workEmail"><i class="fa-regular fa-envelope"></i> אימייל עסקי *</label>
-                <input type="email" id="workEmail" placeholder="name@company.com" required>
-                <div class="error-message">נא להזין אימייל עסקי תקין</div>
-            </div>
-
-            <div class="form-group">
-                <label for="phoneNumber"><i class="fa-solid fa-mobile-screen-button"></i> טלפון נייד *</label>
-                <input type="tel" id="phoneNumber" placeholder="050-1234567" required>
-                <div class="error-message">נא להזין מספר טלפון תקין (ספרות בלבד)</div>
-            </div>
-
-            <div class="form-group form-group-full">
-                <label for="jobTitle"><i class="fa-solid fa-briefcase"></i> תפקיד בארגון *</label>
-                <select id="jobTitle" required>
-                    <option value="" disabled selected>בחרו תפקיד מהרשימה</option>
-                    <option value="owner">בעלים / מנכ"ל</option>
-                    <option value="agent">סוכן ביטוח</option>
-                    <option value="operation">מנהל/ת תפעול</option>
-                    <option value="technology">מנהל/ת טכנולוגיות / מערכות מידע</option>
-                    <option value="other">אחר</option>
-                </select>
-                <div class="error-message">נא לבחור תפקיד מהרשימה</div>
-            </div>
-
-            <button type="submit" class="submit-btn" id="submitBtn">
-                <span>הרשמה לכנס</span>
-                <i class="fa-solid fa-arrow-left"></i>
-                <div class="btn-spinner" id="btnSpinner"></div>
-            </button>
-        </form>
-
-        <!-- Success Animation View -->
-        <div class="success-container" id="successView">
-            <div class="success-icon">
-                <i class="fa-solid fa-check"></i>
-            </div>
-            <h3 class="success-title">הרשמתך התקבלה בהצלחה!</h3>
-            <p class="success-desc">שמחנו לקבל את הרשמתך לכנס הלקוחות של נובידאה 2026. אישור הרשמה מפורט נשלח אלייך במייל ברגעים אלו.</p>
-            <div style="color: var(--gold); font-weight: 600; font-size: 18px;">נתראה ב-12 בנובמבר!</div>
+        <!-- HubSpot Form Embed -->
+        <div class="hs-form-container">
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+            <script>
+              hbspt.forms.create({
+                portalId: "2799426",
+                formId: "62ce3c35-7879-487e-b803-48caefc56124",
+                region: "na1"
+              });
+            </script>
         </div>
     </section>
 
@@ -907,71 +864,6 @@
     // Run countdown update every second
     updateCountdown();
     setInterval(updateCountdown, 1000);
-
-    // Form validation and submission
-    function submitForm(event) {
-        event.preventDefault();
-        
-        const form = document.getElementById("regForm");
-        const fullName = document.getElementById("fullName");
-        const companyName = document.getElementById("companyName");
-        const workEmail = document.getElementById("workEmail");
-        const phoneNumber = document.getElementById("phoneNumber");
-        const jobTitle = document.getElementById("jobTitle");
-        
-        let isValid = true;
-
-        // Simple validation check
-        const inputs = [fullName, companyName, workEmail, phoneNumber, jobTitle];
-        inputs.forEach(input => {
-            const group = input.parentElement;
-            if (!input.value || (input.type === "email" && !validateEmail(input.value))) {
-                group.classList.add("has-error");
-                isValid = false;
-            } else {
-                group.classList.remove("has-error");
-            }
-        });
-
-        if (!isValid) return;
-
-        // Show spinner state on button
-        const submitBtn = document.getElementById("submitBtn");
-        const btnText = submitBtn.querySelector("span");
-        const btnIcon = submitBtn.querySelector("i");
-        const spinner = document.getElementById("btnSpinner");
-
-        btnText.style.display = "none";
-        btnIcon.style.display = "none";
-        spinner.style.display = "block";
-        submitBtn.disabled = true;
-
-        // Simulate API call
-        setTimeout(() => {
-            // Hide Form, show success message
-            form.style.display = "none";
-            document.getElementById("successView").style.display = "block";
-            
-            // Scroll smoothly to success view
-            document.getElementById("register").scrollIntoView({ behavior: 'smooth' });
-        }, 1500);
-    }
-
-    // Helper functions
-    function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(String(email).toLowerCase());
-    }
-
-    // Add live check on input changes to clear error outline
-    const formFields = document.querySelectorAll("#regForm input, #regForm select");
-    formFields.forEach(field => {
-        field.addEventListener("input", function() {
-            if (this.value) {
-                this.parentElement.classList.remove("has-error");
-            }
-        });
-    });
 </script>
 
 </body>
